@@ -5,17 +5,13 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.LocalShipping
-import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material.icons.filled.Inventory
 import androidx.compose.material3.Icon
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -25,16 +21,14 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.firstapp.ViewModel.StartViewModel
-import com.example.firstapp.ui.theme.orange
+import com.example.firstapp.ViewModel.HomeViewModel
 import com.example.firstapp.ui.theme.BleuBic
 import com.example.firstapp.ui.theme.BleuClair
+import com.example.firstapp.ui.theme.orange
 
 @Composable
-fun StartScreen(
-    vm: StartViewModel,
-    onNavigateToLogin: () -> Unit,
-    onNavigateToRegister: () -> Unit
+fun HomeScreen(
+    vm: HomeViewModel
 ) {
     Column(
         modifier = Modifier
@@ -44,10 +38,10 @@ fun StartScreen(
         verticalArrangement = Arrangement.Center
     ) {
 
-        // --- Logo de l'entreprise ---
+        // --- Icône principale ---
         Column(
             modifier = Modifier
-                .size(110.dp)
+                .size(100.dp)
                 .background(
                     color = BleuClair,
                     shape = CircleShape
@@ -56,18 +50,18 @@ fun StartScreen(
             verticalArrangement = Arrangement.Center
         ) {
             Icon(
-                imageVector = Icons.Filled.LocalShipping,
-                contentDescription = "Logo entreprise",
+                imageVector = Icons.Filled.Inventory,
+                contentDescription = "Gestion des stocks",
                 tint = Color.White,
-                modifier = Modifier.size(56.dp)
+                modifier = Modifier.size(52.dp)
             )
         }
 
         Spacer(modifier = Modifier.height(24.dp))
 
-        // --- Nom de l'application ---
+        // --- Titre ---
         Text(
-            text = vm.appName,
+            text = vm.title,
             fontWeight = FontWeight.Bold,
             fontSize = 28.sp,
             color = orange
@@ -75,59 +69,30 @@ fun StartScreen(
 
         Spacer(modifier = Modifier.height(8.dp))
 
-        // --- Message de bienvenue ---
+        // --- Sous-titre ---
         Text(
-            text = vm.welcomeMessage,
+            text = vm.subtitle,
             fontWeight = FontWeight.SemiBold,
-            fontSize = 20.sp,
+            fontSize = 18.sp,
             color = BleuBic
         )
 
         Spacer(modifier = Modifier.height(12.dp))
 
-        // --- Description ---
+        // --- Message ---
         Text(
-            text = vm.description,
+            text = "Gérez facilement vos commandes, stocks et livraisons.",
             fontSize = 14.sp,
-            textAlign = TextAlign.Center,
-            color = BleuBic
+            color = BleuBic,
+            textAlign = TextAlign.Center
         )
 
-        Spacer(modifier = Modifier.height(40.dp))
-
-        // --- Bouton Se connecter ---
-        Button(
-            onClick = onNavigateToLogin,
-            modifier = Modifier
-                .fillMaxWidth()
-                .height(50.dp),
-            colors = ButtonDefaults.buttonColors(
-                containerColor = orange,
-                contentColor = Color.White
-            )
-        ) {
-            Text(
-                text = "Se connecter",
-                fontWeight = FontWeight.SemiBold
-            )
-        }
-
-        Spacer(modifier = Modifier.height(12.dp))
-
-        // --- Bouton Inscription ---
-        OutlinedButton(
-            onClick = onNavigateToRegister,
-            modifier = Modifier
-                .fillMaxWidth()
-                .height(50.dp),
-            colors = ButtonDefaults.outlinedButtonColors(
-                contentColor = BleuBic
-            )
-        ) {
-            Text(
-                text = "S'inscrire",
-                fontWeight = FontWeight.SemiBold
-            )
-        }
+        // TODO:
+        // Ajouter ici les modules :
+        // - Commandes
+        // - Livraisons
+        // - Stocks
+        // - Clients
+        // - Statistiques
     }
 }
