@@ -1,7 +1,7 @@
-package com.example.firstapp.ViewModel
+package com.example.firstapp.viewmodel
 
 import androidx.lifecycle.ViewModel
-import com.example.firstapp.Model.StartModel
+import com.example.firstapp.model.StartModel
 
 class StartViewModel : ViewModel() {
     val msg = StartModel()
