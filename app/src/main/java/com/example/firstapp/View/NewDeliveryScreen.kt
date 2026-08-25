@@ -56,10 +56,12 @@ private val Orange = Color(0xFFE67C2A)
 private val BleuBic = Color(0xFF0B1D36)
 private val Blanc = Color.White
 
+private val BleuClair = Color(0xFF4A90E2)
+
 private val ScreenBackground = Blanc
 private val CardBackground = Blanc
 private val FieldBackground = Blanc
-private val FieldBorder = BleuBic.copy(alpha = 0.18f)
+private val FieldBorder = BleuBic
 private val MainText = BleuBic
 private val SecondaryText = BleuBic.copy(alpha = 0.65f)
 
@@ -236,8 +238,8 @@ fun NewDeliveryScreen(
                                 .height(53.dp),
                             shape = RoundedCornerShape(12.dp),
                             colors = ButtonDefaults.buttonColors(
-                                containerColor = Orange,
-                                contentColor = Blanc
+                                containerColor = BleuBic,
+                                contentColor = BleuClair
                             )
                         ) {
                             Text(

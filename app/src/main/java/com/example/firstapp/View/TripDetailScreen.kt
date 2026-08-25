@@ -46,11 +46,16 @@ import com.example.firstapp.Model.TripStatus
 import com.example.firstapp.ViewModel.TripDetailEvent
 import com.example.firstapp.ViewModel.TripDetailViewModel
 
-private val TripCardColor = Color(0xFF1A1A19)
-private val TripFieldColor = Color(0xFF171717)
-private val TripBorderColor = Color(0xFF2D2D2C)
-private val TripTextColor = Color(0xFFE8E7E2)
-private val TripSecondaryText = Color(0xFF999894)
+private val Orange = Color(0xFFE67C2A)
+private val BleuBic = Color(0xFF0B1D36)
+private val Blanc = Color.White
+private val BleuClair = Color(0xFF4A90E2)
+private val TripCardColor = Blanc
+private val TripFieldColor = BleuClair
+private val TripBorderColor = Blanc
+private val TripTextColor = BleuBic
+private val TripSecondaryText = BleuBic
+
 
 @Composable
 fun TripDetailScreen(
@@ -63,8 +68,8 @@ fun TripDetailScreen(
     Box(
         modifier = Modifier
             .fillMaxSize()
+            .background(Blanc)
             .padding(vertical = 50.dp),
-        contentAlignment = Alignment.Center
     ) {
         Box(modifier = Modifier.fillMaxSize()) {
             Surface(
@@ -209,8 +214,8 @@ fun TripDetailScreen(
                             shape = RoundedCornerShape(12.dp),
                             enabled = trip.status == TripStatus.IN_PROGRESS,
                             colors = ButtonDefaults.buttonColors(
-                                containerColor = Color(0xFFF8F8F7),
-                                contentColor = Color(0xFF20201F),
+                                containerColor = BleuBic,
+                                contentColor = BleuClair,
                                 disabledContainerColor = Color(0xFF315A3E),
                                 disabledContentColor = Color(0xFFB4E5C0)
                             )
