@@ -4,9 +4,10 @@ import androidx.lifecycle.ViewModel
 import com.example.firstapp.Model.StartModel
 
 class StartViewModel : ViewModel() {
-    val msg = StartModel()
 
-    fun getMessage() : String{
-        return msg.message
-    }
+    private val data = StartModel()
+
+    val appName: String get() = data.appName
+    val welcomeMessage: String get() = data.welcomeMessage
+    val description: String get() = data.description
 }
