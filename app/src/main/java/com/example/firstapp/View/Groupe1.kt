@@ -15,12 +15,6 @@ fun AppNavigation(){
         navController = nC,
         startDestination = "home",
     ) {
-        composable("start"){
-            val viewModel: StartViewModel = viewModel()
-            StartScreen(
-                vm = viewModel
-            )
-        }
         composable("home"){
             val viewModel: HomeViewModel = viewModel()
             HomeScreen(
