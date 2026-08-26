@@ -6,14 +6,13 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.firstapp.View.AppNavigation
+import com.example.firstapp.View.AppScaffold
 import com.example.firstapp.ui.theme.FirstAppTheme
+import com.example.firstapp.View.ClientScreen
+import com.example.firstapp.View.ProfilScreen
+import com.example.firstapp.View.VehiculeScreen
 
 class MainActivity : ComponentActivity() {
     @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
@@ -25,7 +24,11 @@ class MainActivity : ComponentActivity() {
                 Scaffold(
                     modifier = Modifier.fillMaxSize()
                 ) {
-                    AppNavigation()
+                    //AppNavigation()
+                    //ClientScreen()
+                    //VehiculeScreen()
+                    //ProfilScreen ()
+                    AppScaffold()
                 }
             }
         }
