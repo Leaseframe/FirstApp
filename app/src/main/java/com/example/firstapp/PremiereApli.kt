@@ -11,7 +11,7 @@ import androidx.compose.ui.Modifier
 import com.example.firstapp.ui.theme.FirstAppTheme
 import com.example.firstapp.view.HomeScreen
 
-class PremiereAppli : ComponentActivity() {
+class PremiereApli : ComponentActivity() {
     @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
