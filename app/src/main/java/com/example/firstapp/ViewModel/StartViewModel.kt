@@ -4,6 +4,10 @@ import androidx.lifecycle.ViewModel
 import com.example.firstapp.model.StartModel
 
 class StartViewModel : ViewModel() {
+<<<<<<< HEAD
+=======
+    val msg = StartModel ()
+>>>>>>> origin/group3
 
     private val data = StartModel()
 
