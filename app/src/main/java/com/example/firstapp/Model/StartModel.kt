@@ -1,4 +1,4 @@
-package com.example.firstapp.Model
+package com.example.firstapp.model
 
 data class StartModel(
     val appName: String = "LogiTrack",

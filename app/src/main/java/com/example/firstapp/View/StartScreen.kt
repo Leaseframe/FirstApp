@@ -1,10 +1,11 @@
-package com.example.firstapp.View
+package com.example.firstapp.view
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+<<<<<<< HEAD
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -16,6 +17,8 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.OutlinedButton
+=======
+>>>>>>> origin/group2
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -25,23 +28,33 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+<<<<<<< HEAD
 import com.example.firstapp.ViewModel.StartViewModel
 import com.example.firstapp.ui.theme.orange
 import com.example.firstapp.ui.theme.BleuBic
 import com.example.firstapp.ui.theme.BleuClair
+=======
+import com.example.firstapp.viewmodel.StartViewModel
+>>>>>>> origin/group2
 
 @Composable
 fun StartScreen(
     vm: StartViewModel,
+<<<<<<< HEAD
     onNavigateToLogin: () -> Unit,
     onNavigateToRegister: () -> Unit
 ) {
+=======
+){
+    val messages = vm.getMessage()
+
+>>>>>>> origin/group2
     Column(
         modifier = Modifier
             .fillMaxSize()
             .padding(24.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center
+        verticalArrangement = Arrangement.Center,
     ) {
 
         // --- Logo de l'entreprise ---
@@ -67,7 +80,11 @@ fun StartScreen(
 
         // --- Nom de l'application ---
         Text(
+<<<<<<< HEAD
             text = vm.appName,
+=======
+            text = messages,
+>>>>>>> origin/group2
             fontWeight = FontWeight.Bold,
             fontSize = 28.sp,
             color = orange

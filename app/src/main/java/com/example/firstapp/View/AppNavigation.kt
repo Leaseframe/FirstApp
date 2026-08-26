@@ -1,4 +1,4 @@
-package com.example.firstapp.View
+package com.example.firstapp.view
 
 import androidx.compose.runtime.Composable
 import androidx.lifecycle.viewmodel.compose.viewModel
@@ -6,10 +6,15 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+<<<<<<< HEAD
 import com.example.firstapp.ViewModel.HomeViewModel
 import com.example.firstapp.ViewModel.LoginViewModel
 import com.example.firstapp.ViewModel.RegisterViewModel
 import com.example.firstapp.ViewModel.StartViewModel
+=======
+import com.example.firstapp.viewmodel.HomeViewModel
+import com.example.firstapp.viewmodel.StartViewModel
+>>>>>>> origin/group2
 
 private object Routes {
     const val START = "start"
@@ -23,8 +28,13 @@ fun AppNavigation() {
     val navController: NavHostController = rememberNavController()
 
     NavHost(
+<<<<<<< HEAD
         navController = navController,
         startDestination = Routes.START
+=======
+        navController = nC,
+        startDestination = "home",
+>>>>>>> origin/group2
     ) {
 
         // --- Écran d'accueil (Start) ---
@@ -36,6 +46,7 @@ fun AppNavigation() {
                 onNavigateToRegister = { navController.navigate(Routes.REGISTER) }
             )
         }
+<<<<<<< HEAD
 
         // --- Écran de connexion ---
         composable(Routes.LOGIN) {
@@ -72,5 +83,13 @@ fun AppNavigation() {
             val vm: HomeViewModel = viewModel()
             HomeScreen(vm = vm)
         }
+=======
+        composable("home"){
+            val viewModel: HomeViewModel = viewModel()
+            HomeScreen(
+                viewModel = viewModel
+            )
+        }
+>>>>>>> origin/group2
     }
 }
